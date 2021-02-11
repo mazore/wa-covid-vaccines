@@ -1,0 +1,10 @@
+.item {
+    color: white;
+    background: orange;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+}
+
+.sign-up {
+    text-decoration: none;
+}
