@@ -28,12 +28,8 @@ database.ref('scrapes').once('value').then((snapshot) => {
 function addListItem(data) {
     const btn = document.createElement('a');
     btn.innerText = 'Sign Up';
+    btn.href = data.url;
     btn.classList.add('btn');
-    if (!data.available) {
-        btn.href = 'javascript:void(0);';
-    } else {
-        btn.href = data.url;
-    }
 
     const p1 = document.createElement('p')
     p1.innerText = (data.num_appointments ?? 0) + ' appointments available';
@@ -45,15 +41,15 @@ function addListItem(data) {
     p2.classList.add('info')
 
     const item = document.createElement('li');
-    item.classList.add('item');
     item.innerText = data.name;
+    item.classList.add('item');
     item.appendChild(btn);
     item.appendChild(p1);
     item.appendChild(p2);
     if (data.available) {
-        item.style.background = 'green';
+        item.style.border = '1px solid green';
     } else {
-        item.style.background = 'red';
+        item.style.border = '1px solid red';
     }
 
     list.appendChild(item);

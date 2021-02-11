@@ -1,0 +1,9 @@
+TODO:
+- Try to add react simply
+- Add more scrapers
+- Live update
+- Format seconds ago
+- Add description and setup readme & contribution
+- Start running backend continuously
+- Add location coordinates
+- Zip code input and sort by distance

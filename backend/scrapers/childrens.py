@@ -1,5 +1,5 @@
 from selenium import webdriver
-from scrape_result import ScrapeResult
+from scrape_result import ScrapeResult  # type: ignore
 
 
 def childrens():

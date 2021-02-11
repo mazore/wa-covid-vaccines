@@ -1,6 +1,6 @@
 from selenium import webdriver
 from time import sleep
-from scrape_result import ScrapeResult
+from scrape_result import ScrapeResult  # type: ignore
 
 
 def seattle_vna():
