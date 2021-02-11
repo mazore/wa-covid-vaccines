@@ -26,8 +26,35 @@ database.ref('scrapes').once('value').then((snapshot) => {
 });
 
 function addListItem(data) {
+    const btn = document.createElement('a');
+    btn.innerText = 'Sign Up';
+    btn.classList.add('btn');
+    if (!data.available) {
+        btn.href = 'javascript:void(0);';
+    } else {
+        btn.href = data.url;
+    }
+
+    const p1 = document.createElement('p')
+    p1.innerText = (data.num_appointments ?? 0) + ' appointments available';
+    p1.classList.add('info')
+
+    const p2 = document.createElement('p');
+    const secsAgo = Math.round(Date.now()/1000 - data.time);
+    p2.innerText = `Last checked ${secsAgo} seconds ago`;
+    p2.classList.add('info')
+
     const item = document.createElement('li');
-    item.innerHTML = `${data.name} <a href="${data.url}" class="sign-up">Sign Up</a>`;
-    item.classList.add('item')
+    item.classList.add('item');
+    item.innerText = data.name;
+    item.appendChild(btn);
+    item.appendChild(p1);
+    item.appendChild(p2);
+    if (data.available) {
+        item.style.background = 'green';
+    } else {
+        item.style.background = 'red';
+    }
+
     list.appendChild(item);
 }

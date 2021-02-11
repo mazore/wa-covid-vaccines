@@ -17,7 +17,3 @@ def childrens():
     num_appointments = len(slots)
     return ScrapeResult("Seattle Children's Hospital", chart_url,
                         num_appointments > 0, num_appointments)
-
-
-if __name__ == '__main__':
-    childrens()

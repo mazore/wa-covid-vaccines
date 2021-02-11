@@ -1,10 +1,47 @@
-.item {
-    color: white;
-    background: orange;
-    font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
     padding: 10px;
 }
 
-.sign-up {
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.item {
+    background: steelblue;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    min-height: 150px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.03);
+}
+
+.btn {
+    display: flex;
+    float: right;
+    background: steelblue;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
     text-decoration: none;
+    font-size: 15px;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.info {
+    font-size: 14px;
 }
