@@ -1,57 +1,35 @@
-* {
-    box-sizing: border-box;
-    padding: 10px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-h1 {
-    text-align: center;
+* {
+    font-family: "Roboto Slab";
+    text-align: center
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    margin: 0;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    /* align-items: center; */
-    width: 100%;
+.show-small, .show-small-inline {
+  display: none !important;
 }
 
-li {
-    border-radius: 5px;
-    padding: 15px 20px;
-    max-width: 500px;
-    margin: 20px auto;
-    max-height: 150px;
-    font-size: 20px;
-    transition: 0.3s;
+@media (max-width: 600px) {
+  .hide-small {
+    display: none !important;
+  }
+
+  .show-small-inline {
+    display: inline;
+  }
+
+  .show-small-block {
+    display: block;
+  }
 }
 
-li:hover {
-    transform: scale(1.03);
-}
-
-.btn {
-    display: flex;
-    float: right;
-    background: steelblue;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.btn:active {
-    transform: scale(0.98);
-}
-
-.info {
-    font-size: 14px;
+.header-text {
+  font-family: "Merriweather", Georgia !important;
+  letter-spacing: 1px !important;
+  font-weight: 700 !important;
 }

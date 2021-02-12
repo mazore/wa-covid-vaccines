@@ -1,5 +1,5 @@
 TODO:
-- Try to add react simply
+- Clean up code
 - Add more scrapers
 - Live update
 - Format seconds ago
@@ -7,3 +7,4 @@ TODO:
 - Start running backend continuously
 - Add location coordinates
 - Zip code input and sort by distance
+- Stop using script tags to precompile (for production), see https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project and https://material-ui.com/getting-started/installation/

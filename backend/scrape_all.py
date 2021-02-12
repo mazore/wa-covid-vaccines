@@ -10,4 +10,4 @@ for result in [scraper() for scraper in all_scrapers]:
     db.put(f'scrapes/{result.name}', 'time', time())
     if result.available:
         db.put(f'scrapes/{result.name}', 'last_appointment_time', time())
-    print(f'set {result.name}')
+    print(f'available: {result.available}, at {result.name}')
