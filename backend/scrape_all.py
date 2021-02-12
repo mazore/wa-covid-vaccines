@@ -1,5 +1,6 @@
 from firebase import firebase
 from scrapers import all_scrapers  # type: ignore
+from scrapers import *  # type: ignore
 from time import time
 
 db = firebase.FirebaseApplication('https://covid-vaccines-default-rtdb.firebaseio.com/', None)

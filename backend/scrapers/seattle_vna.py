@@ -11,7 +11,7 @@ def seattle_vna():
 
     driver = webdriver.Chrome(options=options)
     driver.get(url)
-    sleep(1)
+    sleep(2)
     html = driver.execute_script('return document.documentElement.innerHTML;')
     available = html.find('No sites available') == -1
     return ScrapeResult('Seattle Visiting Nurse Association', url, available)

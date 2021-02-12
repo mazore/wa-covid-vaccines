@@ -1,5 +1,4 @@
 TODO:
-- Clean up code
 - Add more scrapers
 - Last available and last updated
 - Format seconds ago
