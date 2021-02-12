@@ -1,6 +1,10 @@
+const Card = MaterialUI.Card;
+const CardContent = MaterialUI.CardContent;
+const CardHeader = MaterialUI.CardHeader;
+
 class Appointments extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
         this.state = {
             scrapes: []
@@ -17,11 +21,23 @@ class Appointments extends React.Component {
     }
 
     render() {
-        console.log(this.state.scrapes);
         return (
             <div>
                 {this.state.scrapes.map((scrape) => (
-                    <Card key={scrape.name} scrape={scrape}/>
+                    <div key={scrape.name} className="cardBox">
+                        <Card elevation={0} className={scrape.available ? "card" : "card card-no-availability"}>
+                            <CardHeader
+                                className="card-header"
+                                title={<div>{scrape.name}</div>}
+                                subheader={<div>Address</div>}
+                            />
+                            <CardContent>
+                                <Availability scrape={scrape} />
+                                <MoreInformation scrape={scrape} />
+                                <SignUpLink scrape={scrape} />
+                            </CardContent>
+                        </Card>
+                    </div>
                 ))}
             </div>
         );

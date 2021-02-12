@@ -1,39 +1,18 @@
-const useStyles = MaterialUI.makeStyles({
-    container: {
-        maxWidth: "800px",
-        padding: "1rem",
-        margin: "0 auto",
-    },
-    nav: {
-        textAlign: "center",
-        padding: 0,
-    },
-    li: {
-        display: "inline-block",
-        margin: "1rem",
-    },
-    a: {
-        textDecoration: "none",
-    },
-    footerText: {
-        fontSize: ".75rem",
-        textAlign: "center",
-        margin: "3rem",
-    },
-});
+const Grid = MaterialUI.Grid;
+const Typography = MaterialUI.Typography;
 
 function App() {
-    const classes = useStyles();
-
     return (
-        <div className={classes.container}>
-            <nav>
-                <ul className={classes.nav}>
-                    <li className={classes.li}>
-                        <Appointments className={classes.a} />
-                    </li>
-                </ul>
-            </nav>
+        <div className="main">
+            <Grid container justify="center" spacing={3}>
+                <Grid item xs={10} sm={8}>
+                    <h1 className="heading">WA Covid Vaccines</h1>
+                    <Appointments />
+                    <Typography className="footer" variant="caption" display="block" gutterBottom>
+                        Copyright &#169; {new Date().getFullYear()} Evan Mazor. All rights reserved.
+                    </Typography>
+                </Grid>
+            </Grid>
         </div>
     )
 }

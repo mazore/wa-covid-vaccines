@@ -1,8 +1,11 @@
 TODO:
 - Clean up code
 - Add more scrapers
-- Live update
+- Last available and last updated
 - Format seconds ago
+- Change "scrape" terminology
+- Add more data about locations
+- Live update
 - Add description and setup readme & contribution
 - Start running backend continuously
 - Add location coordinates

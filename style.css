@@ -1,35 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-
-* {
-    font-family: "Roboto Slab";
-    text-align: center
-}
 
 body {
-    margin: 0;
+    font-family: "Roboto Slab";
 }
 
-.show-small, .show-small-inline {
-  display: none !important;
+.cardBox {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-@media (max-width: 600px) {
-  .hide-small {
-    display: none !important;
-  }
-
-  .show-small-inline {
-    display: inline;
-  }
-
-  .show-small-block {
-    display: block;
-  }
+.main {
+    padding: 10px;
 }
 
-.header-text {
-  font-family: "Merriweather", Georgia !important;
-  letter-spacing: 1px !important;
-  font-weight: 700 !important;
+.heading {
+    text-align: center;
+}
+
+.card {
+    border: 1px solid;
+    transition: 0.3s;
+}
+
+.card-no-availability {
+    border: 1px solid red;
+}
+
+.availability {
+    padding-bottom: 15px;
+}
+
+.no-availability {
+    color: red;
+}
+
+.card-header {
+    padding-bottom: 0px;
+}
+
+.footer {
+    text-align: center;
 }

@@ -14,4 +14,4 @@ def seattle_vna():
     sleep(1)
     html = driver.execute_script('return document.documentElement.innerHTML;')
     available = html.find('No sites available') == -1
-    return ScrapeResult('Seattle VNA', url, available)
+    return ScrapeResult('Seattle Visiting Nurse Association', url, available)
