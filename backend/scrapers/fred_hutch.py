@@ -1,3 +1,4 @@
+from .helpers import children
 from selenium import webdriver
 from time import sleep
 from scrape_result import ScrapeResult  # type: ignore
@@ -15,16 +16,16 @@ def fred_hutch():
     driver.find_element_by_class_name('jss112').click()  # Find Next Available Visit button
 
     el = driver.find_element_by_class_name('TabView__Content-sc-1oe0awg')
-    c1 = el.find_elements_by_xpath('./child::*')[0]
-    c2 = c1.find_elements_by_xpath('./child::*')[0]
-    c3 = c2.find_elements_by_xpath('./child::*')[0]
-    c4 = c3.find_elements_by_xpath('./child::*')[1]
+    c1 = children(el)[0]  # For some reason xpath doesn't work past this point
+    c2 = children(c1)[0]
+    c3 = children(c2)[0]
+    c4 = children(c3)[1]
 
     def get_is_available():
-        row_container = c4.find_elements_by_xpath('./child::*')[0]
-        for row in row_container.find_elements_by_xpath('./child::*'):
-            for day in row.find_elements_by_xpath('./child::*'):
-                if day.find_elements_by_xpath('./child::*')[0].get_attribute('tabindex') == "0":  # Button enabled
+        row_container = children(c4)[0]
+        for row in children(row_container):
+            for day in children(row):
+                if children(day)[0].get_attribute('tabindex') == "0":  # Button enabled
                     day.click()
                     sleep(2)
                     if el.get_attribute('innerHTML').find('No Visit Times Left') == -1:
@@ -35,7 +36,7 @@ def fred_hutch():
         return ScrapeResult('Fred Hutch', url, True)
 
     # Page to next month
-    header = c3.find_elements_by_xpath('./child::*')[0]
-    header = header.find_elements_by_xpath('./child::*')[0]
-    header.find_elements_by_xpath('./child::*')[2].click()
+    header = children(c3)[0]
+    header = children(header)[0]
+    children(header)[2].click()
     return ScrapeResult('Fred Hutch', url, get_is_available())
