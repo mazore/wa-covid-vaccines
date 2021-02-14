@@ -14,4 +14,5 @@ def seattle_vna():
     sleep(2)
     html = driver.execute_script('return document.documentElement.innerHTML;')
     available = html.find('No sites available') == -1
-    return ScrapeResult('Seattle Visiting Nurse Association', url, available)
+    return ScrapeResult('Seattle Visiting Nurse Association', url, available,
+                        '170 W Dayton St Suite 103A, Edmonds, WA', 98020)

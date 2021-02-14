@@ -1,7 +1,13 @@
 from firebase import firebase
-from scrapers import all_scrapers  # type: ignore
 from scrape_result import ScrapeResult  # type: ignore
 from time import time
+
+from scrapers.childrens import childrens  # type: ignore
+from scrapers.fred_hutch import fred_hutch  # type: ignore
+from scrapers.seattle_vna import seattle_vna  # type: ignore
+from scrapers.snohomish import snohomish  # type: ignore
+
+all_scrapers = [childrens, seattle_vna, fred_hutch, snohomish]
 
 db = firebase.FirebaseApplication('https://covid-vaccines-default-rtdb.firebaseio.com/', None)
 

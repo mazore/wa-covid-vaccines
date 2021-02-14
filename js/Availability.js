@@ -4,7 +4,7 @@ function Availability({ scrape }) {
             Not available</div>
     } else if (typeof scrape.num_appointments == 'undefined') {
         return <div className="availability">
-            No date-specific data available</div>
+            Appointments availabile</div>
     } else {
         return <div className="availability">
             {scrape.num_appointments} Appointments available</div>

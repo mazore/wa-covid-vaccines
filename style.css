@@ -18,7 +18,7 @@ body {
 }
 
 .card {
-    border: 1px solid;
+    border: 3px solid green;
     transition: 0.3s;
 }
 
@@ -28,6 +28,7 @@ body {
 
 .availability {
     padding-bottom: 15px;
+    color: green;
 }
 
 .no-availability {

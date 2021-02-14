@@ -29,7 +29,7 @@ class Appointments extends React.Component {
                             <CardHeader
                                 className="card-header"
                                 title={<div>{scrape.name}</div>}
-                                subheader={<div>Address</div>}
+                                subheader={<div>{`${scrape.address} ${scrape.zip}`}</div>}
                             />
                             <CardContent>
                                 <Availability scrape={scrape} />

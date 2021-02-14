@@ -39,4 +39,5 @@ def fred_hutch():
     header = children(c3)[0]
     header = children(header)[0]
     children(header)[2].click()
-    return ScrapeResult('Fred Hutch', url, get_is_available())
+    return ScrapeResult('Fred Hutch', url, get_is_available(),
+                        '1100 Fairview Ave N Seattle, WA', 98109)

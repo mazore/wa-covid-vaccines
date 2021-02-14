@@ -1,21 +1,26 @@
 class ScrapeResult:
-    def __init__(self, name, url, available, num_appointments=None):
+    def __init__(self, name, url, available, address, zip, num_appointments=None):
         """
-        name - the name of the location
+        name: str - the name of the location
 
-        url - link to website
+        url: str - link to website
 
-        available - boolean whether appointments are available
+        available: boolean - whether appointments are available
 
-        num_appointments (optional) - number of appointments available
+        address: str - address of site
+
+        zip: int - zip code
+
+        num_appointments (optional): int - number of appointments available
 
         To add:
         - appointment available times
         - vaccine type (Moderna or Pfizer)
-        - address
         - eligibility
         """
         self.name = name
         self.url = url
         self.available = available
+        self.address = address
+        self.zip = zip
         self.num_appointments = num_appointments

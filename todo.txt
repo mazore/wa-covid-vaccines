@@ -1,12 +1,11 @@
 TODO:
+- Put sites with availability first
 - Add more scrapers
 - Last available and last updated
 - Format seconds ago
-- Change "scrape" terminology
-- Add more data about locations
-- Live update
+- Change "scrape" (data) terminology
+- Live update from database
 - Add description and setup readme & contribution
-- Start running backend continuously
-- Add location coordinates
+- Running backend continuously (AWS?)
 - Zip code input and sort by distance
 - Stop using script tags to precompile (for production), see https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project and https://material-ui.com/getting-started/installation/

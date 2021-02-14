@@ -15,5 +15,5 @@ def childrens():
     # for el in slots:
     #     print(el.get_attribute('innerHTML'))
     num_appointments = len(slots)
-    return ScrapeResult("Seattle Children's Hospital", chart_url,
-                        num_appointments > 0, num_appointments)
+    return ScrapeResult("Seattle Children's Hospital", chart_url, num_appointments > 0,
+                        '4800 Sand Point Way NE Seattle, WA', 98105, num_appointments)
