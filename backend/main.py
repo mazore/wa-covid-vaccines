@@ -1,3 +1,4 @@
+from datetime import datetime
 from firebase import firebase
 import os
 import psutil
@@ -41,6 +42,8 @@ def update_db():
             if scrape_result.available:
                 db.put(f'scrapes/{scrape_result.name}', 'last_appointment_time', time())
             print(f'available: {scrape_result.available}, at {scrape_result.name}')
+
+    db.put('/', 'last_updated', datetime.now().strftime(r'%B %d at %I:%M %p').replace(' 0', ' '))
 
     driver.close()
 

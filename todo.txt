@@ -1,5 +1,4 @@
 TODO:
-- Add last updated
 - Running backend continuously (AWS?)
 - Add description and setup readme & contribution & add description/footnote to website
 - Twitter bot

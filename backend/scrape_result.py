@@ -24,3 +24,6 @@ class ScrapeResult:
         self.address = address
         self.zip = zip
         self.num_appointments = num_appointments
+
+    def __repr__(self):
+        return self.__dict__

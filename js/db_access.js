@@ -1,4 +1,5 @@
-const apiConfig = {
+// This is a read only key I promise
+const dbConfig = {
     /* spell-checker: disable */
     apiKey: "AIzaSyB6n5x6YmOqBYNtZx8uiSsZNfKFLL8HTtk",
     authDomain: "covid-vaccines.firebaseapp.com",
@@ -10,3 +11,13 @@ const apiConfig = {
     measurementId: "G-HDWG7J9KPB"
     /* spell-checker: enable */
 };
+firebase.initializeApp(dbConfig);
+const database = firebase.database();
+
+async function getScrapes() {
+    return database.ref('scrapes').once('value')
+}
+
+async function getLastUpdated() {
+    return database.ref('last_updated').once('value')
+}

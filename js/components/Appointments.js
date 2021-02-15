@@ -12,7 +12,7 @@ class Appointments extends React.Component {
     }
 
     componentDidMount() {
-        const setScrapes = async () => {
+        const setScrapes = async () => { // And put availabilities first
             const response = await getScrapes();
             const scrapes = Object.values(response.val());
             const available = [];

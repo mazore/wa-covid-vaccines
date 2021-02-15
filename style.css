@@ -15,6 +15,12 @@ body {
 
 .heading {
     text-align: center;
+    margin: 35px;
+}
+
+.lastUpdated {
+    text-align: center;
+    margin: 10px;
 }
 
 .card {
