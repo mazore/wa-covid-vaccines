@@ -16,4 +16,6 @@ def sign_up_genius(url):
         el = driver.find_element_by_xpath(xpath)
         if el.get_attribute('innerHTML') == 'Already filled':
             num_filled += 1
+
+    driver.close()
     return num_filled == total

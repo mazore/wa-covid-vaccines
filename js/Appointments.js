@@ -14,8 +14,17 @@ class Appointments extends React.Component {
     componentDidMount() {
         const setScrapes = async () => {
             const response = await getScrapes();
-            const obj = response.val();
-            this.setState({scrapes: Object.values(obj)});
+            const scrapes = Object.values(response.val());
+            const available = [];
+            const notAvailable = [];
+            for (const scrape of scrapes) {
+                if (scrape.available) {
+                    available.push(scrape);
+                } else {
+                    notAvailable.push(scrape);
+                }
+            }
+            this.setState({scrapes: available.concat(notAvailable)});
         }
         setScrapes();
     }

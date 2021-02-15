@@ -1,11 +1,13 @@
 TODO:
-- Put sites with availability first
-- Add more scrapers
-- Last available and last updated
+- Running backend continuously (AWS?)
+- Add description and setup readme & contribution & add description/footnote to website
+- Last updated
+- Twitter bot
+- Zip code input and sort by distance
+- Last available
 - Format seconds ago
 - Change "scrape" (data) terminology
-- Live update from database
-- Add description and setup readme & contribution
-- Running backend continuously (AWS?)
-- Zip code input and sort by distance
 - Stop using script tags to precompile (for production), see https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project and https://material-ui.com/getting-started/installation/
+- Live update from database
+- Add more details about how many appointments are available
+- Add more information part

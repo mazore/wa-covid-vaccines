@@ -1,7 +1,7 @@
 from .helpers import children
+from scrape_result import ScrapeResult  # type: ignore
 from selenium import webdriver
 from time import sleep
-from scrape_result import ScrapeResult  # type: ignore
 
 
 def fred_hutch():
@@ -39,5 +39,7 @@ def fred_hutch():
     header = children(c3)[0]
     header = children(header)[0]
     children(header)[2].click()
-    return ScrapeResult('Fred Hutch', url, get_is_available(),
+    available = get_is_available()
+    driver.close()
+    return ScrapeResult('Fred Hutch', url, available,
                         '1100 Fairview Ave N Seattle, WA', 98109)
