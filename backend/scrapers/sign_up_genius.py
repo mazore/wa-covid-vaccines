@@ -1,14 +1,6 @@
-from selenium import webdriver
-
-
-def sign_up_genius(url):
+def sign_up_genius(driver, url):
     """Returns True if all appointments are filled"""
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-
-    driver = webdriver.Chrome(options=options)
     driver.get(url)
-
     num_filled = total = 0
     for i in range(2, 18):
         total += 1
@@ -17,5 +9,4 @@ def sign_up_genius(url):
         if el.get_attribute('innerHTML') == 'Already filled':
             num_filled += 1
 
-    driver.close()
     return num_filled == total

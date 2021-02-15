@@ -10,7 +10,7 @@ function SignUpLink({ scrape }) {
             rel="noreferrer"
             target="_blank"
         >
-            {scrape.available ? "Sign Up" : "Website"}
+            {scrape.available ? (scrape.walk_in ? "Website" : "Sign Up") : "Website"}
         </Button>
     );
 }

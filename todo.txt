@@ -1,8 +1,10 @@
 TODO:
+- Add last updated
 - Running backend continuously (AWS?)
 - Add description and setup readme & contribution & add description/footnote to website
-- Last updated
 - Twitter bot
+- Improve seamar
+- Clickable address
 - Zip code input and sort by distance
 - Last available
 - Format seconds ago

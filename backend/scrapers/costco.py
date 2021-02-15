@@ -1,6 +1,5 @@
 from .helpers import try_every_second
-from scrape_result import ScrapeResult  # type: ignore
-from selenium import webdriver
+from scrape_result import ScrapeResult
 
 
 class Location:
@@ -12,7 +11,7 @@ class Location:
         self.zip = zip
 
 
-def costco():
+def costco(driver):
     # spell-checker: disable
     locations = [
         Location('ctx9xpqe', 4985, 'Clarkston', '301 FIFTH STREET CLARKSTON, WA', 99403),
@@ -29,34 +28,28 @@ def costco():
     ]
 
     # spell-checker: enable
-    return [one_location(location) for location in locations]
+    return [one_location(driver, location) for location in locations]
 
 
-def one_location(location):
+def one_location(driver, location):
     url = f'https://book-costcopharmacy.appointment-plus.com/{location.code}/?&e_id={location.e_id}#/'
 
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-
-    driver = webdriver.Chrome(options=options, service_log_path='NUL')
     driver.get(url)
 
     def click_get_started():
         driver.find_element_by_xpath('//*[@id="page-content"]/div/div[2]/div[3]/ul/li/a').click()
 
-    try_every_second(click_get_started, refresh_after=5, driver=driver)
+    try_every_second(click_get_started, refresh_after=3, driver=driver)
 
     def get_is_available():
         html = driver.find_element_by_class_name('date-time-container').get_attribute('innerHTML')
         if html.find('progressbar') != -1:  # If loading
             raise Exception("not done loading")  # Will be caught
-        print('html', html)
         return html.find('We’re sorry, but there are not available times.') == -1
 
     available = try_every_second(get_is_available, refresh_after=5, driver=driver)
 
     print('\n'*3, available, location.name_suffix, '\n'*3)
 
-    driver.close()
     return ScrapeResult(f'Costco {location.name_suffix}', url, available,
                         location.address, location.zip)

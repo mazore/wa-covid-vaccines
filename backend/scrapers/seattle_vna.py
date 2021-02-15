@@ -1,15 +1,10 @@
 from .helpers import try_every_second
-from scrape_result import ScrapeResult  # type: ignore
-from selenium import webdriver
+from scrape_result import ScrapeResult
 
 
-def seattle_vna():
+def seattle_vna(driver):
     url = "https://schedule.seattlevna.com/home"
 
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-
-    driver = webdriver.Chrome(options=options)
     driver.get(url)
 
     def get_availability():
@@ -21,6 +16,5 @@ def seattle_vna():
 
     available = try_every_second(get_availability)
 
-    driver.close()
     return ScrapeResult('Seattle Visiting Nurse Association', url, available,
                         '170 W Dayton St Suite 103A, Edmonds, WA', 98020)

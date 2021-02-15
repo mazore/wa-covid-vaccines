@@ -1,17 +1,13 @@
 from .helpers import children
-from scrape_result import ScrapeResult  # type: ignore
-from selenium import webdriver
+from scrape_result import ScrapeResult
 from time import sleep
 
 
-def fred_hutch():
+def fred_hutch(driver):
     url = "https://www.solvhealth.com/book-online/gJ8GYA"
 
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-
-    driver = webdriver.Chrome(options=options)
     driver.get(url)
+
     driver.find_element_by_class_name('jss112').click()  # Yes button
     driver.find_element_by_class_name('jss112').click()  # Find Next Available Visit button
 
@@ -40,6 +36,5 @@ def fred_hutch():
     header = children(header)[0]
     children(header)[2].click()
     available = get_is_available()
-    driver.close()
     return ScrapeResult('Fred Hutch', url, available,
                         '1100 Fairview Ave N Seattle, WA', 98109)
