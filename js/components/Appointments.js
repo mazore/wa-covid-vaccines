@@ -1,7 +1,3 @@
-const Card = MaterialUI.Card;
-const CardContent = MaterialUI.CardContent;
-const CardHeader = MaterialUI.CardHeader;
-
 class Appointments extends React.Component {
     constructor() {
         super();
@@ -30,6 +26,10 @@ class Appointments extends React.Component {
     }
 
     render() {
+        const Card = MaterialUI.Card;
+        const CardContent = MaterialUI.CardContent;
+        const CardHeader = MaterialUI.CardHeader;
+
         return (
             <div>
                 {this.state.scrapes.map((scrape) => (
@@ -42,7 +42,6 @@ class Appointments extends React.Component {
                             />
                             <CardContent>
                                 <Availability scrape={scrape} />
-                                <MoreInformation scrape={scrape} />
                                 <SignUpLink scrape={scrape} />
                             </CardContent>
                         </Card>

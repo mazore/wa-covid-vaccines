@@ -18,6 +18,11 @@ body {
     margin: 35px;
 }
 
+.about {
+    border: 1px solid;
+    padding: 5px;
+}
+
 .lastUpdated {
     text-align: center;
     margin: 10px;
@@ -26,6 +31,8 @@ body {
 .card {
     border: 3px solid green;
     transition: 0.3s;
+    max-width: 500px;
+    margin: auto;
 }
 
 .card-no-availability {

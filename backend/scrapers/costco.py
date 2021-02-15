@@ -14,17 +14,17 @@ class Location:
 def costco(driver):
     # spell-checker: disable
     locations = [
-        Location('ctx9xpqe', 4985, 'Clarkston', '301 FIFTH STREET CLARKSTON, WA', 99403),
-        Location('ctxyd41v', 4989, 'Covington', '27520 COVINGTON WAY SE COVINGTON, WA', 98042),
-        Location('ctx6gxv6', 5031, 'Federal Way', '35100 ENCHANTED PARKWAY S. Federal Way, WA', 98003),
+        Location('ctx9xpqe', 4985, 'Clarkston', '301 Fifth Street Clarkston, WA', 99403),
+        Location('ctxyd41v', 4989, 'Covington', '27520 Covington Way SE Covington, WA', 98042),
+        Location('ctx6gxv6', 5031, 'Federal Way', '35100 Enchanted Parkway S. Federal Way, WA', 98003),
 
-        Location('ctxq8qyy', 5061, 'Issaquah', '1801 10TH AVE NORTHWEST ISSAQUAH, WA', 98027),
-        Location('ctx5cjym', 5003, 'Kirkland', '8629 120TH AVE NE Kirkland, WA', 98033),
-        Location('ctx9e07c', 4995, 'Redmond', '7725 188TH AVE NE Redmond, WA', 98052),
+        Location('ctxq8qyy', 5061, 'Issaquah', '1801 10TH Ave Northwest Issaquah, WA', 98027),
+        Location('ctx5cjym', 5003, 'Kirkland', '8629 120TH Ave NE Kirkland, WA', 98033),
+        Location('ctx9e07c', 4995, 'Redmond', '7725 188TH Ave NE Redmond, WA', 98052),
 
-        Location('ctx5hetv', 4935, 'Seattle', '4401 FOURTH AVE S Seattle, WA', 98134),
-        Location('ctxymp9s', 4997, 'Aurora', '1175 NORTH 205th STREET SEATTLE, WA', 98133),
-        Location('ctx5myxq', 4975, 'Tukwila', '400 COSTCO DR Tukwila, WA', 98188),
+        Location('ctx5hetv', 4935, 'Seattle', '4401 Fourth AVE S Seattle, WA', 98134),
+        Location('ctxymp9s', 4997, 'Aurora', '1175 North 205th Street Seattle, WA', 98133),
+        Location('ctx5myxq', 4975, 'Tukwila', '400 Costco DR Tukwila, WA', 98188),
     ]
 
     # spell-checker: enable

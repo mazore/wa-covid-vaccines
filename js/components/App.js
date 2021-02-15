@@ -13,7 +13,6 @@ class App extends React.Component {
     componentDidMount() {
         const setScrapes = async () => {
             const response = await getLastUpdated();
-            console.log(response.val())
             this.setState({lastUpdated: response.val()});
         }
         setScrapes();
@@ -30,11 +29,15 @@ class App extends React.Component {
                             Last updated: {this.state.lastUpdated}
                         </Typography>
 
-                        <Appointments />
+                        <Appointments/>
 
                         <Typography className="footer" variant="caption" display="block" gutterBottom>
+                            Github <a href="http://github.com/mazore/wa-covid-vaccines">here</a>
+                            <br />
                             Copyright &#169; {new Date().getFullYear()} Evan Mazor. All rights reserved.
                         </Typography>
+
+                        <div style={{ height: 100 }}/>
                     </Grid>
                 </Grid>
             </div>

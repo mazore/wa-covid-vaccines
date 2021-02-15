@@ -1,10 +1,10 @@
 TODO:
 - Running backend continuously (AWS?)
-- Add description and setup readme & contribution & add description/footnote to website
 - Twitter bot
 - Improve seamar
 - Clickable address
 - Zip code input and sort by distance
+- Setup eslint
 - Last available
 - Format seconds ago
 - Change "scrape" (data) terminology

@@ -1,6 +1,6 @@
-const Button = MaterialUI.Button;
-
 function SignUpLink({ scrape }) {
+    const Button = MaterialUI.Button;
+
     return (
         <Button
             className="btn"
