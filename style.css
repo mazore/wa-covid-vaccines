@@ -18,9 +18,13 @@ body {
     margin: 35px;
 }
 
-.about {
-    border: 1px solid;
-    padding: 5px;
+.disclaimer {
+    color: orange;
+    text-align: center;
+    /* border: 1px solid orange; */
+    /* border-radius: 3px; */
+    padding: 3px;
+    text-decoration: underline;
 }
 
 .lastUpdated {

@@ -25,6 +25,10 @@ class App extends React.Component {
                     <Grid item xs={10} sm={8}>
                         <h1 className="heading">WA Covid Vaccines</h1>
 
+                        <Typography className="disclaimer" style={{ color: 'orange' }}>
+                            DISCLAIMER: This is still a work in progress
+                        </Typography>
+
                         <Typography className="lastUpdated" variant="h6" display="block">
                             Last updated: {this.state.lastUpdated}
                         </Typography>
@@ -33,6 +37,8 @@ class App extends React.Component {
 
                         <Typography className="footer" variant="caption" display="block" gutterBottom>
                             Github <a href="http://github.com/mazore/wa-covid-vaccines">here</a>
+                            <br />
+                            Email me at <a href="mailto:wacovidvaccines@gmail.com">wacovidvaccines@gmail.com</a>
                             <br />
                             Copyright &#169; {new Date().getFullYear()} Evan Mazor. All rights reserved.
                         </Typography>

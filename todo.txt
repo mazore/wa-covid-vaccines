@@ -1,9 +1,8 @@
 TODO:
-- Running backend continuously (AWS?)
 - Twitter bot
-- Improve seamar
 - Clickable address
 - Zip code input and sort by distance
+- Improve seamar
 - Setup eslint
 - Last available
 - Format seconds ago
