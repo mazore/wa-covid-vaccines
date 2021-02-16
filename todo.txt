@@ -1,6 +1,5 @@
 TODO:
 - Twitter bot
-- Clickable address
 - Zip code input and sort by distance
 - Improve seamar
 - Setup eslint

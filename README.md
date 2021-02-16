@@ -2,7 +2,7 @@
 
 Website link: https://mazore.github.io/wa-covid-vaccines
 
-This program checks many vaccine websites for availability every couple of minutes and updates the website. You can request I add a website by adding the link to this [google doc](https://docs.google.com/document/d/1c29oy3h_LXEAy_7b93bnpQrB5mGDv5UkRzwFqydWe84/edit?usp=sharing) (try not to add duplicates). Keep in mind this is a work in progress and may not be the most reliable or accurate. You can send me an email at wacovidvaccines@gmail.com
+This program checks many vaccine websites for availability every couple of minutes and updates the website. You can request I add a website by adding the link to this [google doc](https://docs.google.com/document/d/1c29oy3h_LXEAy_7b93bnpQrB5mGDv5UkRzwFqydWe84/edit?usp=sharing) (try not to add duplicates). Keep in mind this is a work in progress and may not be the most reliable or accurate (the backend is just running on my computer). You can send me an email at wacovidvaccines@gmail.com.
 
 ## Coming soon
 - Twitter bot that notifies you when appointments becomes available

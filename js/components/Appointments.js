@@ -14,6 +14,7 @@ class Appointments extends React.Component {
             const available = [];
             const notAvailable = [];
             for (const scrape of scrapes) {
+                scrape.gMapsLink = `https://www.google.com/maps/place/${scrape.address.replace(' ', '+')}`
                 if (scrape.available) {
                     available.push(scrape);
                 } else {
@@ -38,7 +39,12 @@ class Appointments extends React.Component {
                             <CardHeader
                                 className="card-header"
                                 title={<div>{scrape.name}</div>}
-                                subheader={<div>{`${scrape.address} ${scrape.zip}`}</div>}
+                                subheader={<a
+                                    href={scrape.gMapsLink} className
+                                    style={{ color: 'gray' }}
+                                >
+                                    {`${scrape.address} ${scrape.zip}`}
+                                </a>}
                             />
                             <CardContent>
                                 <Availability scrape={scrape} />

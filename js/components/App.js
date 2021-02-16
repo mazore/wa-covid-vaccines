@@ -40,7 +40,7 @@ class App extends React.Component {
                             <br />
                             Email me at <a href="mailto:wacovidvaccines@gmail.com">wacovidvaccines@gmail.com</a>
                             <br />
-                            Copyright &#169; {new Date().getFullYear()} Evan Mazor. All rights reserved.
+                            Copyright &#169; {new Date().getFullYear()}. All rights reserved.
                         </Typography>
 
                         <div style={{ height: 100 }}/>
