@@ -1,4 +1,4 @@
-> :warning: Update: This project is no longer being updated because of better websites like covidwa.com
+:warning: Update: This project is no longer being updated because of better websites like covidwa.com
 
 # WA Covid Vaccines
 
