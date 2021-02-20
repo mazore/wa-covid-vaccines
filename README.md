@@ -1,4 +1,6 @@
-# [WA Covid Vaccines](https://mazore.github.io/wa-covid-vaccines)
+> :warning: Update: This project is no longer being updated because of better websites like covidwa.com
+
+# WA Covid Vaccines
 
 Website link: https://mazore.github.io/wa-covid-vaccines
 
